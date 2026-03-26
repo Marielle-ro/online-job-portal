@@ -15,7 +15,7 @@ export const loginUser = async (credentials) => {
                 },
             }
         );
-        return response.data;
+        return response.data;npm
     } catch (error) {
         console.error("Error response:", error.response?.data || error.message);
         throw new Error(error.response?.data?.message || "Invalid username or password.");

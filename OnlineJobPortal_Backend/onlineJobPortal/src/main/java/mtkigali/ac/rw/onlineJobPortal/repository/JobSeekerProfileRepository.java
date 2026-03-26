@@ -1,0 +1,15 @@
+package mtkigali.ac.rw.onlineJobPortal.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import mtkigali.ac.rw.onlineJobPortal.model.JobSeekerProfile;
+
+import java.util.Optional;
+import java.util.UUID;
+
+@Repository
+public interface JobSeekerProfileRepository extends JpaRepository<JobSeekerProfile, UUID> {
+    // Optional<JobSeekerProfile> findByUserId(Long userId);
+    Optional<JobSeekerProfile> findByUser_PersonId(UUID personId);
+   
+}
