@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-text m-0 min-h-screen;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply border border-primary text-primary px-4 py-2 rounded-md hover:bg-primary hover:text-white transition-colors;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-2 px-4 py-2 text-nav-text hover:bg-nav-hover rounded-md transition-colors;
+  }
+
+  .nav-link.active {
+    @apply bg-nav-hover;
+  }
+
+  .card {
+    @apply bg-card p-6 rounded-lg shadow-md;
+  }
+}
