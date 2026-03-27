@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "8089:8089"
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/online_job_portal
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=Hakizimana@12
+
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: online_job_portal
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Hakizimana@12
+    ports:
+      - "5432:5432"
